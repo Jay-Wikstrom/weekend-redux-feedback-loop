@@ -1,6 +1,19 @@
 function Understanding() {
+    const handleSubmit = () => {
+        console.log('Understanding submitted');
+    }
+
     return (
-        <h1>Understanding</h1>
+        <div>
+            <h2>How well are you understanding the content?</h2>
+            <form onSubmit={handleSubmit}>
+                <label>Understanding?</label>
+                <input
+                    type="number"
+                />
+                <button>Next</button>
+            </form>
+        </div>
     )
 }
 

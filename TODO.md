@@ -4,7 +4,7 @@
 	[x] Create database
 	[x] npm install
 	
-[ ] Create components
+[x] Create components
 	[x] Feeling form
 		[ ] Input
 		[ ] Next Button
@@ -18,3 +18,5 @@
 		[ ] Input
 		[ ] Next Button
 	[x] Review
+	[x] Routes
+	[x] Store
