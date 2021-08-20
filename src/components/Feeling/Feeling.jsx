@@ -11,6 +11,8 @@ function Feeling(){
                 <label>Feeling?</label>
                 <input 
                     type="number"
+                    min="1"
+                    max="6"
                 />
                 <button>Next</button>
             </form>

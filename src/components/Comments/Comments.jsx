@@ -9,7 +9,7 @@ function Comments() {
             <form onSubmit={handleSubmit}>
                 <label>Comments</label>
                 <input
-                    type="number"
+                    
                 />
                 <button>Next</button>
             </form>
