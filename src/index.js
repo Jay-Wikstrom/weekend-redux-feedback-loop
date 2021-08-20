@@ -15,6 +15,9 @@ const mainReducer = (state = [], action) => {
     if (action.type === 'SET_UNDERSTANDING') {
         return action.payload
     }
+    if (action.type === 'SET_SUPPORT') {
+        return action.payload
+    }
     return state;
 }
 

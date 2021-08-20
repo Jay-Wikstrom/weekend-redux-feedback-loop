@@ -14,15 +14,15 @@
 	[x] Understand form
 		[x] Input
 		[x] Next Button
-		[ ] Dispatch
-		[ ] Reducer in index.js
-		[ ] History
+		[x] Dispatch
+		[x] Reducer in index.js
+		[x] History
 	[x] Supported form
 		[x] Input
 		[x] Next Button
-		[ ] Dispatch
-		[ ] Reducer in index.js
-		[ ] History
+		[x] Dispatch
+		[x] Reducer in index.js
+		[x] History
 	[x] Comments form
 		[x] Input
 		[x] Next Button
