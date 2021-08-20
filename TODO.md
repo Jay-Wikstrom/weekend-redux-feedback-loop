@@ -3,6 +3,8 @@
 [x] Setup
 	[x] Create database
 	[x] npm install
+	[x] Routes
+	[x] Store
 	
 [x] Create components
 	[x] Feeling form
@@ -26,9 +28,13 @@
 	[x] Comments form
 		[x] Input
 		[x] Next Button
-		[ ] Dispatch
-		[ ] Reducer in index.js
+		[x] Dispatch
+		[x] Reducer in index.js
+		[x] History
+	[ ] Review
+		[ ] Render answers
+		[ ] Submit to database
 		[ ] History
-	[x] Review
-	[x] Routes
-	[x] Store
+	[ ] Submit page
+		[ ] Reset the data
+	
