@@ -3,15 +3,13 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 
 function Feeling(){
-    const feeling = useSelector(store => store.feelingReducer);
+    const feeling = useSelector(store => store.mainReducer);
     const dispatch = useDispatch();
     const history = useHistory();
 
     const [feelingInput, setFeelingInput] = useState('');
 
     const handleSubmit =() =>{
-        console.log('Feeling submitted');
-        console.log(feelingInput)
         dispatch({
                 type: 'SET_FEELING',
                 payload: feelingInput

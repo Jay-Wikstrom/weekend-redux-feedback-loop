@@ -1,6 +1,19 @@
+import { React, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { useHistory } from 'react-router-dom';
+
 function Understanding() {
+    const understanding = useSelector(store => store.mainReducer);
+    const dispatch = useDispatch();
+    const history = useHistory();
+
+    const [understandingInput, setUnderstandingInput] = useState('');
     const handleSubmit = () => {
-        console.log('Understanding submitted');
+        dispatch({
+            type: 'SET_UNDERSTANDING',
+            payload: understandingInput
+        })
+        history.push('/supported');
     }
 
     return (
@@ -12,6 +25,8 @@ function Understanding() {
                     type="number"
                     min="1"
                     max="6"
+                    value={understandingInput}
+                    onChange={e => setUnderstandingInput(e.target.value)}
                 />
                 <button>Next</button>
             </form>
