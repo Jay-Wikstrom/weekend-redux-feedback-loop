@@ -6,17 +6,29 @@
 	
 [x] Create components
 	[x] Feeling form
-		[ ] Input
-		[ ] Next Button
+		[x] Input
+		[x] Next Button
+		[ ] Dispatch
+		[ ] Reducer in index.js
+		[ ] History
 	[x] Understand form
-		[ ] Input
-		[ ] Next Button
+		[x] Input
+		[x] Next Button
+		[ ] Dispatch
+		[ ] Reducer in index.js
+		[ ] History
 	[x] Supported form
-		[ ] Input
-		[ ] Next Button
+		[x] Input
+		[x] Next Button
+		[ ] Dispatch
+		[ ] Reducer in index.js
+		[ ] History
 	[x] Comments form
-		[ ] Input
-		[ ] Next Button
+		[x] Input
+		[x] Next Button
+		[ ] Dispatch
+		[ ] Reducer in index.js
+		[ ] History
 	[x] Review
 	[x] Routes
 	[x] Store
