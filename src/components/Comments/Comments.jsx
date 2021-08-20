@@ -1,6 +1,20 @@
+import { React, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { useHistory } from 'react-router-dom';
+
 function Comments() {
+    const comments = useSelector(store => store.mainReducer);
+    const dispatch = useDispatch();
+    const history = useHistory();
+
+    const [commentsInput, setCommentsInput] = useState('');
+
     const handleSubmit = () => {
-        console.log('Comments submitted');
+        dispatch({
+            type: 'SET_COMMENTS',
+            payload: commentsInput
+        })
+        history.push('/review');
     }
 
     return (
@@ -9,7 +23,8 @@ function Comments() {
             <form onSubmit={handleSubmit}>
                 <label>Comments</label>
                 <input
-                    
+                    value={commentsInput}
+                    onChange={e => setCommentsInput(e.target.value)}
                 />
                 <button>Next</button>
             </form>
