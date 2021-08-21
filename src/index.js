@@ -21,6 +21,9 @@ const mainReducer = (state = [], action) => {
     if (action.type === 'SET_COMMENTS') {
         return [...state, action.payload]
     }
+    if (action.type === 'CLEAR_FEEDBACK'){
+        return [];
+    }
     return state;
 }
 
