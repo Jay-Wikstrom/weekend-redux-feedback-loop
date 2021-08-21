@@ -7,7 +7,7 @@ router.post('/', (req, res) => {
     INSERT INTO
         "feedback" ("feeling", "understanding", "support", "comments")
     VALUES
-        ($1, $2, $3, $4)
+        ($1, $2, $3, $4);
     `;
     console.log('sqlQuery', sqlQuery);
     let sqlParams = [
@@ -26,3 +26,5 @@ router.post('/', (req, res) => {
             res.sendStatus(500);
         });
 });
+
+module.exports = router;

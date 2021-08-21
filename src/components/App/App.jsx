@@ -6,8 +6,8 @@ import Feeling from '../Feeling/Feeling';
 import Understanding from '../Understanding/Understanding';
 import Supported from '../Supported/Supported';
 import Comments from '../Comments/Comments';
-import Review
- from '../Review/Review';
+import Review from '../Review/Review';
+import Submit from '../Submit/Submit';
 function App() {
 
   return (
@@ -34,6 +34,9 @@ function App() {
             <li>
               <Link to="/review">Review</Link>
             </li>
+            <li>
+              <Link to="/submit">Submit</Link>
+            </li>
           </ul>
         </nav>
 
@@ -51,6 +54,9 @@ function App() {
         </Route>
         <Route path="/review" exact>
           <Review />
+        </Route>
+        <Route path="/submit" exact>
+          <Submit />
         </Route>
       </Router>
     </div>

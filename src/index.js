@@ -13,13 +13,13 @@ const mainReducer = (state = [], action) => {
         return action.payload
     }
     if (action.type === 'SET_UNDERSTANDING') {
-        return action.payload
+        return [...state, action.payload]
     }
     if (action.type === 'SET_SUPPORT') {
-        return action.payload
+        return [...state, action.payload]
     }
     if (action.type === 'SET_COMMENTS') {
-        return action.payload
+        return [...state, action.payload]
     }
     return state;
 }
