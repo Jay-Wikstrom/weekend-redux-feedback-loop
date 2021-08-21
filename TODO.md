@@ -31,10 +31,21 @@
 		[x] Dispatch
 		[x] Reducer in index.js
 		[x] History
-	[ ] Review
-		[ ] Render answers
-		[ ] Submit to database
-		[ ] History
-	[ ] Submit page
-		[ ] Reset the data
+	[x] Review
+		[x] Render answers
+		[x] Submit to database
+		[x] History
+	[x] Submit page
+		[x] Reset the data
+
+	[ ] Stretch
+		[x] Update scores
+		[ ] Material UI
+		[ ] Admin page
+			[ ] Recent data at top
+			[ ] Allow user to delete
+			[ ] Prompt user to confirm deletion
+			[ ] Flag for further review
+		[ ] Heroku
+
 	
