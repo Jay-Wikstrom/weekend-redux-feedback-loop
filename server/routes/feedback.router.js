@@ -11,7 +11,7 @@ router.post('/', (req, res) => {
     `;
     console.log('sqlQuery', sqlQuery);
     let sqlParams = [
-        req.body.feedback,
+        req.body.feeling,
         req.body.understanding,
         req.body.support,
         req.body.comments
@@ -20,9 +20,11 @@ router.post('/', (req, res) => {
 
     pool.query(sqlQuery, sqlParams)
         .then((dbRes) => {
+            console.log(dbRes.rows)
             res.sendStatus(201);
         })
         .catch((error) => {
+            console.log('Error in DB post', error)
             res.sendStatus(500);
         });
 });
