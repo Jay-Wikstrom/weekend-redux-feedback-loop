@@ -14,6 +14,10 @@ function Review() {
         comments: feedback[3]
     }
 
+    const handlePrev = () => {
+        history.push('/comments');
+    }
+
     const handleSubmit = () => {
         axios({
             method: 'POST',
@@ -34,6 +38,7 @@ function Review() {
                 <h3>Understanding: {feedbackObject.understanding}</h3>
                 <h3>Support: {feedbackObject.support}</h3>
                 <h3>Comments: {feedbackObject.comments}</h3>
+            <button onClick={handlePrev}>Previous Page</button>
             <button onClick={handleSubmit}>Submit</button> 
         </div>
     )

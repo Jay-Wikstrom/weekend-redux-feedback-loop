@@ -9,6 +9,10 @@ function Supported() {
 
     const [supportInput, setSupportInput] = useState('');
 
+    const handlePrev = () => {
+        history.push('/understanding');
+    }
+
     const handleSubmit = () => {
         if (supportInput === '') {
             alert('Please enter a number between 1-6');
@@ -33,8 +37,9 @@ function Supported() {
                     value={supportInput}
                     onChange={e => setSupportInput(e.target.value)}
                 />
-                <button>Next</button>
             </form>
+            <button onClick={handlePrev}>Previous Page</button>
+            <button onClick={handleSubmit}>Next Page</button>
         </div>
     )
 }

@@ -9,7 +9,11 @@ function Feeling(){
 
     const [feelingInput, setFeelingInput] = useState('');
 
-    const handleSubmit =() =>{
+    const handlePrev = () => {
+        history.push('/');
+    }
+
+    const handleSubmit = () => {
         if (feelingInput === ''){
             alert('Please enter a number between 1-6');
         } else {
@@ -33,8 +37,9 @@ function Feeling(){
                     value={feelingInput}
                     onChange={e => setFeelingInput(e.target.value)}
                 />
-                <button>Next</button>
             </form>
+            <button onClick={handlePrev}>Previous Page</button>
+            <button onClick={handleSubmit}>Next Page</button>
         </div>
     )
 }

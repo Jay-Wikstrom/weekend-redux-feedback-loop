@@ -8,6 +8,11 @@ function Understanding() {
     const history = useHistory();
 
     const [understandingInput, setUnderstandingInput] = useState('');
+
+    const handlePrev = () => {
+        history.push('/feeling');
+    }
+
     const handleSubmit = () => {
         if (understandingInput === '') {
             alert('Please enter a number between 1-6');
@@ -32,8 +37,9 @@ function Understanding() {
                     value={understandingInput}
                     onChange={e => setUnderstandingInput(e.target.value)}
                 />
-                <button>Next</button>
             </form>
+            <button onClick={handlePrev}>Previous Page</button>
+            <button onClick={handleSubmit}>Next Page</button>
         </div>
     )
 }
