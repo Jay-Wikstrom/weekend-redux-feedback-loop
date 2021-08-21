@@ -10,11 +10,15 @@ function Supported() {
     const [supportInput, setSupportInput] = useState('');
 
     const handleSubmit = () => {
-        dispatch({
-            type: 'SET_SUPPORT',
-            payload: supportInput
-        })
-        history.push('/comments');
+        if (supportInput === '') {
+            alert('Please enter a number between 1-6');
+        } else {
+            dispatch({
+                type: 'SET_SUPPORT',
+                payload: supportInput
+            })
+            history.push('/comments');
+        }
     }
 
     return (

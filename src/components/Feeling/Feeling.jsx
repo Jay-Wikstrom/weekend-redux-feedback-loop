@@ -10,11 +10,15 @@ function Feeling(){
     const [feelingInput, setFeelingInput] = useState('');
 
     const handleSubmit =() =>{
-        dispatch({
-                type: 'SET_FEELING',
-                payload: feelingInput
-            })
-        history.push('/understanding');
+        if (feelingInput === ''){
+            alert('Please enter a number between 1-6');
+        } else {
+            dispatch({
+                    type: 'SET_FEELING',
+                    payload: feelingInput
+                })
+            history.push('/understanding');
+        }
     }
 
     return (

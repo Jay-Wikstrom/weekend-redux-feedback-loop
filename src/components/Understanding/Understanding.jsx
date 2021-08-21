@@ -9,11 +9,15 @@ function Understanding() {
 
     const [understandingInput, setUnderstandingInput] = useState('');
     const handleSubmit = () => {
-        dispatch({
-            type: 'SET_UNDERSTANDING',
-            payload: understandingInput
-        })
-        history.push('/supported');
+        if (understandingInput === '') {
+            alert('Please enter a number between 1-6');
+        } else {
+            dispatch({
+                type: 'SET_UNDERSTANDING',
+                payload: understandingInput
+            })
+            history.push('/supported');
+        }
     }
 
     return (
