@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 
 function Understanding() {
-    const understanding = useSelector(store => store.mainReducer);
+    const understanding = useSelector(store => store.feedbackReducer);
     const dispatch = useDispatch();
     const history = useHistory();
 

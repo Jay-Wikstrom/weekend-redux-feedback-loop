@@ -1,5 +1,4 @@
 import React from 'react';
-import axios from 'axios';
 import './App.css';
 import {HashRouter as Router, Route, Link} from 'react-router-dom';
 import Feeling from '../Feeling/Feeling';
@@ -8,6 +7,8 @@ import Supported from '../Supported/Supported';
 import Comments from '../Comments/Comments';
 import Review from '../Review/Review';
 import Submit from '../Submit/Submit';
+import Home from '../Home/Home';
+
 function App() {
 
   return (
@@ -17,29 +18,10 @@ function App() {
           <h1 className='App-title'>Feedback!</h1>
           <h4>Don't forget it!</h4>
         </header>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/feeling">Feeling</Link>
-            </li>
-            <li>
-              <Link to="/understanding">Understanding</Link>
-            </li>
-            <li>
-              <Link to="/supported">Supported</Link>
-            </li>
-            <li>
-              <Link to="/comments">comments</Link>
-            </li>
-            <li>
-              <Link to="/review">Review</Link>
-            </li>
-            <li>
-              <Link to="/submit">Submit</Link>
-            </li>
-          </ul>
-        </nav>
 
+        <Route path="/" exact>
+          <Home />
+        </Route>
         <Route path="/feeling" exact>
           <Feeling />
         </Route>

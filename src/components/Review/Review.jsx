@@ -3,7 +3,7 @@ import {useHistory} from 'react-router-dom';
 import axios from 'axios';
 
 function Review() {
-    const feedback = useSelector(store => store.mainReducer);
+    const feedback = useSelector(store => store.feedbackReducer);
     console.log(feedback);
     const history = useHistory();
 

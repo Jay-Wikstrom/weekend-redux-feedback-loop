@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 
 function Supported() {
-    const support = useSelector(store => store.mainReducer);
+    const support = useSelector(store => store.feedbackReducer);
     const dispatch = useDispatch();
     const history = useHistory();
 

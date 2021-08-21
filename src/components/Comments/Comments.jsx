@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 
 function Comments() {
-    const comments = useSelector(store => store.mainReducer);
+    const comments = useSelector(store => store.feedbackReducer);
     const dispatch = useDispatch();
     const history = useHistory();
 
