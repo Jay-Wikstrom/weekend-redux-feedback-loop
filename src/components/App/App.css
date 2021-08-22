@@ -21,3 +21,16 @@
 h4 {
   font-style: italic;
 }
+
+h1 {
+  font-family: 'roboto slab', serif;
+}
+
+h2 {
+  font-family: 'roboto slab', serif;
+  margin-bottom: 30px;
+}
+
+body {
+  background-color: rgb(199, 198, 196);
+}

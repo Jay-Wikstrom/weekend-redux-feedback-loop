@@ -1,6 +1,7 @@
 import {useSelector} from 'react-redux';
 import {useHistory} from 'react-router-dom';
 import axios from 'axios';
+import { Button, Container, Paper, Grid, makeStyles } from '@material-ui/core';
 
 function Review() {
     const feedback = useSelector(store => store.feedbackReducer);
@@ -32,15 +33,33 @@ function Review() {
     }
 
     return (
-        <div>
-            <h1>Review</h1>
-                <h3>Feelings: {feedbackObject.feeling}</h3>
-                <h3>Understanding: {feedbackObject.understanding}</h3>
-                <h3>Support: {feedbackObject.support}</h3>
-                <h3>Comments: {feedbackObject.comments}</h3>
-            <button onClick={handlePrev}>Previous Page</button>
-            <button onClick={handleSubmit}>Submit</button> 
-        </div>
+        <Container maxWidth="sm">
+            <Paper elevation={0} className="formContainer">
+                
+
+        <h1>Review</h1>
+            <h3>Feelings: {feedbackObject.feeling}</h3>
+            <h3>Understanding: {feedbackObject.understanding}</h3>
+            <h3>Support: {feedbackObject.support}</h3>
+            <h3>Comments: {feedbackObject.comments}</h3>
+                
+        <Button
+            variant="contained"
+            color="secondary"
+            onClick={handlePrev}
+        >
+            Previous Page
+        </Button>
+
+        <Button
+            variant="contained"
+            color="primary"
+            onClick={handleSubmit}
+        >
+            Next Page
+        </Button>
+            </Paper>
+        </Container>
     )
 }
 

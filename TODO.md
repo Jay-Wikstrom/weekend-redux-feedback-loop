@@ -40,7 +40,7 @@
 
 	[ ] Stretch
 		[x] Update scores
-		[ ] Material UI
+		[x] Material UI
 		[ ] Admin page
 			[ ] Recent data at top
 			[ ] Allow user to delete
