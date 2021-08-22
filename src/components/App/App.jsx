@@ -41,7 +41,9 @@ function App() {
         <Route path="/submit" exact>
           <Submit />
         </Route>
-        <Admin />
+        <Route path="/admin" exact>
+          <Admin />
+        </Route>
       </Router>
     </div>
   );
