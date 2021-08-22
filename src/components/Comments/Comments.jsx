@@ -33,7 +33,7 @@ function Comments() {
     return (
         <Container maxWidth="sm">
             <Paper elevation={0} className="formContainer">
-                <Grid container spacing={3} justify="center" item xs={12}>
+                <Grid container spacing={3} justifyContent="center" item xs={12}>
                     <h2>Any comments you want to leave?</h2>
                     <form onSubmit={handleSubmit}>
                         
@@ -43,7 +43,7 @@ function Comments() {
                             type="text"
                             variant="outlined"
                             multiline
-                            rowsMax={6}
+                            maxRows={6}
                             fullWidth
                             className={classes.field}
                             

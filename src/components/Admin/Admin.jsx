@@ -22,6 +22,19 @@ function Admin (){
         })
     }
 
+    const handleDelete = (feedback) => {
+        axios({
+            method: 'DELETE',
+            url: (`/feedback/${feedback.id}`)
+        }).then(function (res) {
+            fetchFeedback()
+        }).catch((error) => {
+            console.log('Delete error')
+        })
+    }
+
+//handleDelete(feedback)
+
     return (
         <Container maxWidth="md">
             <h2>Admin</h2>
@@ -33,7 +46,6 @@ function Admin (){
                             <TableCell align="center">Understanding</TableCell>
                             <TableCell align="center">Support</TableCell>
                             <TableCell align="center">Comments</TableCell>
-                            <TableCell align="center">Date</TableCell>
                             <TableCell align="center">Delete</TableCell>
                         </TableRow>
                     </TableHead>
@@ -46,8 +58,17 @@ function Admin (){
                                     <TableCell align="center">{feedback.understanding}</TableCell>
                                     <TableCell align="center">{feedback.support}</TableCell>
                                     <TableCell align="center">{feedback.comments}</TableCell>
-                                    <TableCell align="center">{feedback.date}</TableCell>
-                                    <TableCell align="center">DELETE</TableCell>
+                                    <TableCell align="center">
+                                        <Button
+                                            variant="contained"
+                                            color="secondary"
+                                            onClick={() => {
+                                                if (window.confirm('Are you sure you wish to delete this feedback?')) 
+                                                handleDelete(feedback)} }
+                                        >
+                                            Delete
+                                        </Button>
+                                    </TableCell>
                                 </TableRow>
                             );
                         })}

@@ -37,7 +37,7 @@ function Feeling(){
     return (
         <Container maxWidth="sm">
             <Paper elevation={0} className="formContainer">
-                <Grid container spacing={3} justify="center" item xs={12}>
+                <Grid container spacing={3} justifyContent="center" item xs={12}>
         
                     <h2>How are you feeling today?</h2>
                     <form onSubmit={handleSubmit}>

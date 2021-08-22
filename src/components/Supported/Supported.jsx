@@ -36,7 +36,7 @@ function Supported() {
     return (
         <Container maxWidth="sm">
             <Paper elevation={0} className="formContainer">
-                <Grid container spacing={3} justify="center" item xs={12}>
+                <Grid container spacing={3} justifyContent="center" item xs={12}>
                     <h2>How well are you being supported?</h2>
                     <form onSubmit={handleSubmit}>
                         <TextField
