@@ -10,24 +10,29 @@ function Supported() {
 
     const [supportInput, setSupportInput] = useState('');
 
+    // Take user to previous page
     const handlePrev = () => {
         history.push('/understanding');
     }
 
     const handleSubmit = () => {
+        // Check to make sure input isn't empty
         if (supportInput === '') {
             alert('Please enter a number between 1-6');
         } else {
+            // Dispatch to index.js
             dispatch({
                 type: 'SET_SUPPORT',
                 payload: supportInput
             })
+            // Take user to next page
             history.push('/comments');
         }
     }
 
     const useStyles = makeStyles({
         field: {
+            //TextField padding set to 10
             padding: 10
         }
     })

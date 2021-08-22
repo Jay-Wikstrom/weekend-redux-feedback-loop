@@ -11,24 +11,29 @@ function Feeling(){
     const [feelingInput, setFeelingInput] = useState('');
 
     const handlePrev = () => {
+        // Take user to previous page
         history.push('/');
     }
 
 
     const handleSubmit = () => {
+        // Check to make sure input isn't empty
         if (feelingInput === ''){
             alert('Please enter a number between 1-6');
         } else {
+            // Dispatch to index.js
             dispatch({
                     type: 'SET_FEELING',
                     payload: feelingInput
                 })
+            // Take user to next page
             history.push('/understanding');
         }
     }
 
     const useStyles = makeStyles({
         field: {
+            //TextField padding set to 10
             padding: 10
         }
     })

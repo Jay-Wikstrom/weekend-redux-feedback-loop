@@ -3,15 +3,16 @@ import axios from 'axios';
 import {Button, Paper, Container, Table, TableBody, TableHead, TableCell, TableRow} from '@material-ui/core';
 
 function Admin (){
+    // Feedback data on page load
     useEffect(() => {
         fetchFeedback();
     }, []);
 
+    // Local state to store feedback data
     let [feedbackList, setFeedbackList] = useState([]);
 
     const fetchFeedback = () => {
-        console.log('in fetch feedback');
-
+        // Fetch feedback from server
         axios({
             method: 'GET',
             url: '/feedback',
@@ -20,9 +21,10 @@ function Admin (){
         }).catch((error) => {
             console.log('error', error);
         })
-    }
+    } 
 
     const handleDelete = (feedback) => {
+        // Delete request to server
         axios({
             method: 'DELETE',
             url: (`/feedback/${feedback.id}`)
@@ -32,8 +34,6 @@ function Admin (){
             console.log('Delete error')
         })
     }
-
-//handleDelete(feedback)
 
     return (
         <Container maxWidth="md">
@@ -77,6 +77,6 @@ function Admin (){
             </Paper>
         </Container>
     )
-}
+} // End Admin function
 
 export default Admin;

@@ -5,6 +5,7 @@ function Home(){
     const history = useHistory();
 
     const handleSubmit = () => {
+        // Take user to next page
         history.push('/feeling');
     }
     return (

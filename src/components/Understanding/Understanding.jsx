@@ -10,24 +10,29 @@ function Understanding() {
 
     const [understandingInput, setUnderstandingInput] = useState('');
 
+    // Take user to previous page
     const handlePrev = () => {
         history.push('/feeling');
     }
 
     const handleSubmit = () => {
+        // Check to make sure input isn't empty
         if (understandingInput === '') {
             alert('Please enter a number between 1-6');
         } else {
+            // Dispatch to index.js
             dispatch({
                 type: 'SET_UNDERSTANDING',
                 payload: understandingInput
             })
+            // Take user to next page
             history.push('/supported');
         }
     }
 
     const useStyles = makeStyles({
         field: {
+            //TextField padding set to 10
             padding: 10,
             
         }

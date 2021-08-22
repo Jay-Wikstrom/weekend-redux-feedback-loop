@@ -16,10 +16,12 @@ function Review() {
     }
 
     const handlePrev = () => {
+        // Take user to previous page
         history.push('/comments');
     }
 
     const handleSubmit = () => {
+        // Send feedback to server
         axios({
             method: 'POST',
             url: '/feedback',
@@ -29,6 +31,7 @@ function Review() {
         }).catch((error)=> {
             console.log('Post error', error);
         })
+        // Take user to next page
         history.push('/submit');
     }
 

@@ -10,20 +10,24 @@ function Comments() {
 
     const [commentsInput, setCommentsInput] = useState('');
 
+    // Take user to previous page
     const handlePrev = () => {
         history.push('/supported');
     }
 
     const handleSubmit = () => {
+        // Dispatch to index.js
         dispatch({
             type: 'SET_COMMENTS',
             payload: commentsInput
         })
+        // Take user to next page
         history.push('/review');
     }
 
     const useStyles = makeStyles({
         field: {
+            //TextField padding and margin set to 10
             padding: 10,
             margin: 10,
         }
