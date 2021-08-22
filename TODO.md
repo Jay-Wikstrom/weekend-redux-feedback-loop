@@ -42,7 +42,7 @@
 		[x] Update scores
 		[x] Material UI
 		[ ] Admin page
-			[ ] Recent data at top
+			[x] Recent data at top
 			[ ] Allow user to delete
 			[ ] Prompt user to confirm deletion
 			[ ] Flag for further review

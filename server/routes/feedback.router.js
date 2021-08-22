@@ -2,6 +2,20 @@ const express = require('express');
 const router = express.Router();
 const pool = require('../modules/pool');
 
+router.get('/', (req, res) => {
+    let sqlQuery = `
+        SELECT * FROM "feedback"
+        ORDER BY "date" DESC;
+    `;
+    pool.query(sqlQuery)
+        .then((dbRes) => {
+            res.send(dbRes.rows);
+        }).catch((error) => {
+            console.log('GET error', error);
+            res.sendStatus(500);
+        });
+});
+
 router.post('/', (req, res) => {
     let sqlQuery = `
     INSERT INTO

@@ -8,6 +8,7 @@ import Comments from '../Comments/Comments';
 import Review from '../Review/Review';
 import Submit from '../Submit/Submit';
 import Home from '../Home/Home';
+import Admin from '../Admin/Admin';
 
 function App() {
 
@@ -40,6 +41,7 @@ function App() {
         <Route path="/submit" exact>
           <Submit />
         </Route>
+        <Admin />
       </Router>
     </div>
   );
