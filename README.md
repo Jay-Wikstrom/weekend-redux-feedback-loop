@@ -1,9 +1,9 @@
 # Project Name
 
-[Project Instructions](./INSTRUCTIONS.md), this line may be removed once you have updated the README.md
+Weekend-Redux-Feedback-Loop
 
 ## Description
 
-Your project description goes here. What problem did you solve? How did you solve it?
+This is an app that allows users to submit feedback based on how they are feeling, how they are understanding the material they are learning, and how they feel they are being supported.  They can also leave additional comments.  The information is stored on a database which sends it to an admin page.
 
 Additional README details can be found [here](https://github.com/PrimeAcademy/readme-template/blob/master/README.md).
