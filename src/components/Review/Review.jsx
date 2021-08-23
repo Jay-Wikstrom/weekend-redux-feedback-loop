@@ -4,16 +4,11 @@ import axios from 'axios';
 import { Button, Container, Paper, Grid, makeStyles } from '@material-ui/core';
 
 function Review() {
-    const feedback = useSelector(store => store.feedbackReducer);
-    console.log(feedback);
+    const feeling = useSelector(store => store.feelingReducer);
+    const understanding = useSelector(store => store.understandingReducer);
+    const support = useSelector(store => store.supportReducer);
+    const comments = useSelector(store => store.commentReducer);
     const history = useHistory();
-
-    let feedbackObject = {
-        feeling: feedback[0],
-        understanding: feedback[1],
-        support: feedback[2],
-        comments: feedback[3]
-    }
 
     const handlePrev = () => {
         // Take user to previous page
@@ -25,7 +20,8 @@ function Review() {
         axios({
             method: 'POST',
             url: '/feedback',
-            data: feedbackObject
+            data: { feeling, understanding, support, comments}
+            //data: feedbackObject
         }).then((response) => {
             console.log(response);
         }).catch((error)=> {
@@ -41,10 +37,10 @@ function Review() {
                 
 
         <h1>Review</h1>
-            <h3>Feelings: {feedbackObject.feeling}</h3>
-            <h3>Understanding: {feedbackObject.understanding}</h3>
-            <h3>Support: {feedbackObject.support}</h3>
-            <h3>Comments: {feedbackObject.comments}</h3>
+            <h3>Feelings: {feeling}</h3>
+            <h3>Understanding: {understanding}</h3>
+            <h3>Support: {support}</h3>
+            <h3>Comments: {comments}</h3>
                 
         <Button
             variant="contained"

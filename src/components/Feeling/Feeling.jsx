@@ -4,7 +4,7 @@ import { useHistory } from 'react-router-dom';
 import { Button, Container, TextField, Paper, Grid, makeStyles } from '@material-ui/core';
 
 function Feeling(){
-    const feeling = useSelector(store => store.feedbackReducer);
+    const feeling = useSelector(store => store.feelingReducer);
     const dispatch = useDispatch();
     const history = useHistory();
 
@@ -18,7 +18,7 @@ function Feeling(){
 
     const handleSubmit = () => {
         // Check to make sure input isn't empty
-        if (feelingInput === ''){
+        if (feelingInput === '' || feelingInput > 7 || feelingInput < 0){
             alert('Please enter a number between 1-6');
         } else {
             // Dispatch to index.js

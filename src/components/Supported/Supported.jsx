@@ -4,7 +4,7 @@ import { useHistory } from 'react-router-dom';
 import { Button, Container, TextField, Paper, Grid, makeStyles } from '@material-ui/core';
 
 function Supported() {
-    const support = useSelector(store => store.feedbackReducer);
+    const support = useSelector(store => store.supportReducer);
     const dispatch = useDispatch();
     const history = useHistory();
 
@@ -17,7 +17,7 @@ function Supported() {
 
     const handleSubmit = () => {
         // Check to make sure input isn't empty
-        if (supportInput === '') {
+        if (supportInput === '' || supportInput > 7 || supportInput < 0) {
             alert('Please enter a number between 1-6');
         } else {
             // Dispatch to index.js

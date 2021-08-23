@@ -4,7 +4,7 @@ import { useHistory } from 'react-router-dom';
 import { Button, Container, TextField, Paper, Grid, makeStyles} from '@material-ui/core';
 
 function Comments() {
-    const comments = useSelector(store => store.feedbackReducer);
+    const comments = useSelector(store => store.commentReducer);
     const dispatch = useDispatch();
     const history = useHistory();
 
